@@ -10,3 +10,5 @@ function App() {
 }
 
 export default App;
+
+// nem tudom folytatni, egyszeruen nem veszi be a json-t, azt irja undefined
