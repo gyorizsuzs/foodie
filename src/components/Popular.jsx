@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -17,7 +16,7 @@ function Popular() {
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
       );
       const data = await api.json();
 
@@ -37,7 +36,7 @@ function Popular() {
             arrows: false,
             paginations: false,
             drag: "free",
-            margin: "5rem",
+            gap: "5rem",
           }}
         >
           {popular.map((recipe) => {
